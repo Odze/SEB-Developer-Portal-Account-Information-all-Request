@@ -1,0 +1,438 @@
+{
+	"info": {
+		"_postman_id": "ebea3df4-d334-4dc7-9de4-40ad62076491",
+		"name": "SEB API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account Information",
+			"item": [
+				{
+					"name": "GET /accounts",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Request-ID",
+								"value": "F3cslD9NcG5IDK6DKexzUysqbwEyVZ90",
+								"type": "text"
+							},
+							{
+								"key": "PSU-IP-Address",
+								"value": "127.0.0.1",
+								"type": "text"
+							},
+							{
+								"key": "withBalance",
+								"value": "false",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts",
+							"protocol": "https",
+							"host": [
+								"api-sandbox",
+								"sebgroup",
+								"com"
+							],
+							"path": [
+								"ais",
+								"v7",
+								"identified2",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /accounts/{accountId}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Request-ID",
+								"value": "F3cslD9NcG5IDK6DKexzUysqbwEyVZ90",
+								"type": "text"
+							},
+							{
+								"key": "PSU-IP-Address",
+								"value": "127.0.0.1",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "withBalance",
+								"value": "false",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/?{{ACCOUNTID}}=",
+							"protocol": "https",
+							"host": [
+								"api-sandbox",
+								"sebgroup",
+								"com"
+							],
+							"path": [
+								"ais",
+								"v7",
+								"identified2",
+								"accounts",
+								""
+							],
+							"query": [
+								{
+									"key": "{{ACCOUNTID}}",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /accounts/{accountId}/balances",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Request-ID",
+								"value": "F3cslD9NcG5IDK6DKexzUysqbwEyVZ90",
+								"type": "text"
+							},
+							{
+								"key": "PSU-IP-Address",
+								"value": "127.0.0.1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/{{ACCOUNTID}}/balances?",
+							"protocol": "https",
+							"host": [
+								"api-sandbox",
+								"sebgroup",
+								"com"
+							],
+							"path": [
+								"ais",
+								"v7",
+								"identified2",
+								"accounts",
+								"{{ACCOUNTID}}",
+								"balances"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /accounts/{accountId}/transactions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Request-ID",
+								"value": "eEzjlIa6ejk89shgHJoc0ozus7DLWDog",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/{{ACCOUNTID}}/transactions?dateFrom=2019-02-05&dateTo=2021-02-05&bookingStatus=booked&transactionSequenceNumber=100",
+							"protocol": "https",
+							"host": [
+								"api-sandbox",
+								"sebgroup",
+								"com"
+							],
+							"path": [
+								"ais",
+								"v7",
+								"identified2",
+								"accounts",
+								"{{ACCOUNTID}}",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2019-02-05"
+								},
+								{
+									"key": "dateTo",
+									"value": "2021-02-05"
+								},
+								{
+									"key": "bookingStatus",
+									"value": "booked"
+								},
+								{
+									"key": "transactionSequenceNumber",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /accounts/{accountId}/transactions/{transactionId}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Request-ID",
+								"value": "eEzjlIa6ejk89shgHJoc0ozus7DLWDog",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/{{ACCOUNTID}}/transactions/{{transactionId}}",
+							"protocol": "https",
+							"host": [
+								"api-sandbox",
+								"sebgroup",
+								"com"
+							],
+							"path": [
+								"ais",
+								"v7",
+								"identified2",
+								"accounts",
+								"{{ACCOUNTID}}",
+								"transactions",
+								"{{transactionId}}"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "client_authentication",
+				"value": "body",
+				"type": "string"
+			},
+			{
+				"key": "useBrowser",
+				"value": true,
+				"type": "boolean"
+			},
+			{
+				"key": "authUrl",
+				"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/authorize",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "d1QF8arUnCYHTfFDxHF0",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "Token",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "psd2_accounts psd2_payments",
+				"type": "string"
+			},
+			{
+				"key": "state",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/token",
+				"type": "string"
+			},
+			{
+				"key": "challengeAlgorithm",
+				"value": "S256",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "authorization_code",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "DXj7M0eHJWRryAYoOOiz",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "queryParams",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Token",
+			"value": "6tC4EIsilJB7d1se24hH"
+		}
+	]
+}
