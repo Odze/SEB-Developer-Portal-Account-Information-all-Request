@@ -107,7 +107,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/?{{ACCOUNTID}}=",
+							"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/?{{AccountID}}=",
 							"protocol": "https",
 							"host": [
 								"api-sandbox",
@@ -123,7 +123,7 @@
 							],
 							"query": [
 								{
-									"key": "{{ACCOUNTID}}",
+									"key": "{{AccountID}}",
 									"value": ""
 								}
 							]
@@ -168,7 +168,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/{{ACCOUNTID}}/balances?",
+							"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/{{AccountID}}/balances?",
 							"protocol": "https",
 							"host": [
 								"api-sandbox",
@@ -180,7 +180,7 @@
 								"v7",
 								"identified2",
 								"accounts",
-								"{{ACCOUNTID}}",
+								"{{AccountID}}",
 								"balances"
 							],
 							"query": [
@@ -195,6 +195,9 @@
 				},
 				{
 					"name": "GET /accounts/{accountId}/transactions",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -215,12 +218,22 @@
 							},
 							{
 								"key": "X-Request-ID",
-								"value": "eEzjlIa6ejk89shgHJoc0ozus7DLWDog",
+								"value": "F3cslD9NcG5IDK6DKexzUysqbwEyVZ90",
+								"type": "text"
+							},
+							{
+								"key": "PSU-IP-Address",
+								"value": "127.0.0.1",
+								"type": "text"
+							},
+							{
+								"key": "withBalance",
+								"value": "false",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/{{ACCOUNTID}}/transactions?dateFrom=2019-02-05&dateTo=2021-02-05&bookingStatus=booked&transactionSequenceNumber=100",
+							"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/{{AccountID}}/transactions?bookingStatus=booked",
 							"protocol": "https",
 							"host": [
 								"api-sandbox",
@@ -232,25 +245,13 @@
 								"v7",
 								"identified2",
 								"accounts",
-								"{{ACCOUNTID}}",
+								"{{AccountID}}",
 								"transactions"
 							],
 							"query": [
 								{
-									"key": "dateFrom",
-									"value": "2019-02-05"
-								},
-								{
-									"key": "dateTo",
-									"value": "2021-02-05"
-								},
-								{
 									"key": "bookingStatus",
 									"value": "booked"
-								},
-								{
-									"key": "transactionSequenceNumber",
-									"value": "100"
 								}
 							]
 						}
@@ -284,7 +285,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/{{ACCOUNTID}}/transactions/{{transactionId}}",
+							"raw": "https://api-sandbox.sebgroup.com/ais/v7/identified2/accounts/{{AccountID}}/transactions/{{TransactionID}}",
 							"protocol": "https",
 							"host": [
 								"api-sandbox",
@@ -296,9 +297,9 @@
 								"v7",
 								"identified2",
 								"accounts",
-								"{{ACCOUNTID}}",
+								"{{AccountID}}",
 								"transactions",
-								"{{transactionId}}"
+								"{{TransactionID}}"
 							],
 							"query": [
 								{
@@ -432,7 +433,15 @@
 	"variable": [
 		{
 			"key": "Token",
-			"value": "6tC4EIsilJB7d1se24hH"
+			"value": "Eh4aKaRcflrHdY7eGT8F"
+		},
+		{
+			"key": "AccountID",
+			"value": "5a59028c-e757-4f22-b88c-3ba90573383c"
+		},
+		{
+			"key": "TransactionID",
+			"value": "6f24de7e-9f81-4f09-999a-b33bead16e8d"
 		}
 	]
 }
